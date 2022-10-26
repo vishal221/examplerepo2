@@ -1,53 +1,19 @@
 - hosts: bazinga
   become: yes
-  #ignore_errors: yes
-  tasks:
+  roles:
 
-    - name: apt update
-      shell: apt update
+    - env_setup
+    - nginx_conf
+    - python_setup
+    - run
+    
 
-    - name: Create a directory if it does not exist
-      ansible.builtin.file:
-        path: /home/ubuntu/myDir
-        state: directory
-        mode: '0755'
-        owner: ubuntu
 
-    - name: Create a directory if it does not exist
-      ansible.builtin.file:
-        path: /home/ubuntu/myDir2
-        state: directory
-        mode: '0755'
-        owner: ubuntu
-        group: ubuntu
-   
-    - name: Clone a repo with separate git directory
-      ansible.builtin.git:
-        repo: https://github.com/nathanforester/BirthDateAppFlask.git
-        dest: /home/ubuntu/myDir2/ 
+     
 
-    - name: create file
-      shell: touch /home/ubuntu/myDir/myText
+    
+    
+    
 
-    - name: write to file
-      shell: echo "some text" > /home/ubuntu/myDir/myText
-
-    - name: Install "nginx" to latest version
-      ansible.builtin.apt:
-        name: nginx
-        state: latest
-
-    - name: Clone a repo with separate git directory
-      ansible.builtin.git:
-        repo: https://github.com/nathanforester/BirthDateAppFlask.git
-        dest: /home/ubuntu/myDir2/
-
-    - name: Install python pip
-      ansible.builtin.apt:
-        name: python3-pip
-
-    - name: Install multi python packages
-      ansible.builtin.pip:
-        name:
-          - Flask
+    
   
