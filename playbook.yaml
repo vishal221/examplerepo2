@@ -1,11 +1,11 @@
-- hosts: bazinga
+- hosts: localhost
   become: yes
   roles:
 
-    - env_setup
-    - nginx_conf
-    - python_setup
-    - run
+    - env
+    - nginx
+    - python
+    - running
     
 
 
