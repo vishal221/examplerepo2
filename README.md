@@ -10,7 +10,7 @@ This project shows how to automate reverse proxy and basic app deployment using 
 
 - ssh onto one instance and put your script and ansible files onto it
 
-- create and configure ssh key, editing the inventory and playbook as required
+- create and configure the ssh key, editing the inventory and playbook as required
 
 - run the command 
 
