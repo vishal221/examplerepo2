@@ -8,8 +8,8 @@
     path: /home/jenkins/myDir
     state: directory
     mode: '0755'
-    owner: ubuntu
-    group: ubuntu
+    owner: jenkins
+    group: jenkins
 
 - name: Clone a repo with separate git directory
   ansible.builtin.git:
