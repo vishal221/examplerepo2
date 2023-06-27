@@ -2,10 +2,10 @@
   become: yes
   roles:
 
-    - env
-    - nginx
-    - python
-    - running
+    - environment
+    - webserver-nginx
+    - py
+    - run
     
 
 
