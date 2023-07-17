@@ -19,7 +19,7 @@ This project shows how to automate reverse proxy and basic app deployment using 
    ```
    to initiate a role to divide your project into sections
 
-- run the  command
+- run the command
 
     ```
         ansible-playbook -v -i inventory.yaml playbook.yaml
