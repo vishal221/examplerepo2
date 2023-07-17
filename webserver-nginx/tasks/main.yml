@@ -20,7 +20,7 @@
 
           server {
             listen 80;
-            server_name 172.31.12.135;
+            server_name 172.31.36.113;
 
             location / {
                 proxy_pass http://127.0.0.1:5000;
